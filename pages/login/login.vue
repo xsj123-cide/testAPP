@@ -10,15 +10,26 @@
 </template>
 
 <script>
+	import { index} from '@/api/index.js'
 	export default {
 		data() {
 			return {
 				
 			}
 		},
-		methods: {
-			
-		}
+		onPullDownRefresh() {
+			// this.request()
+		},
+		onLoad() {
+			// console.log('1')
+			// this.request()
+		},
+		request() {
+			// console.log('2')
+			// 	index().then(res => {
+			// 		console.log(res)
+			// 	}).catch(() => setTimeout(() => this.$refs.ltm.toast('网络好像出了点问题，下拉刷新试试'), 123))
+		},
 	}
 </script>
 

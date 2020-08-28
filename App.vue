@@ -1,4 +1,4 @@
-<script>
+<script >
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
@@ -13,5 +13,5 @@
 </script>
 
 <style>
-	@import './static/styles/app.scss';
+	@import '@/common/style/app.scss';
 </style>
