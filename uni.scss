@@ -20,6 +20,13 @@ $color-success: #4cd964;
 $color-warning: #f0ad4e;
 $color-error: #dd524d;
 
+$app-base-bg: #F2F2F2; // app 页面背景色
+$app-base-color: #F76454; // app 主题颜色
+$app-sec-text-color: #999999; // app 次要文字颜色
+$app-main-text-color: #333333; // app 主题文字颜色
+$app-tabbar-height: 98rpx; // app tabbar高度
+
+
 /* 文字基本颜色 */
 $text-color-base: #343434; //基本色
 $text-color-inverse: #fff; //反色
@@ -35,6 +42,290 @@ $bg-color-white: #ffffff;
 $bg-color-grey: #f9f9f9;
 $bg-color-hover: #f1f1f1; //点击状态颜色
 $bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色
+
+$app-nav-height: 128rpx; // app 导航栏高度
+$app-item-height: 90rpx; // app 功能列表项高度
+$app-item-line-height: 2rpx; // app 功能列表项分割线高度
+$app-item-padding-width: 30rpx; // app 功能列表项左右空白宽度
+
+@mixin page {
+	height: 100%;
+	box-sizing: border-box;
+	flex-direction: column;
+	background: $bg-color;
+	border-top: $app-nav-height solid #FFFFFF;
+	.content {
+		flex: 1;
+		height: 100%;
+		position: relative;
+		box-sizing: border-box;
+	}
+}
+
+@mixin flex($c: row) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: $c;
+}
+
+.app-item { // app 列表项样式
+	@include flex();
+	font-size: 32rpx;
+	position: relative;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	min-height: $app-item-height;
+	justify-content: space-between;
+	padding: 0 $app-item-padding-width;
+	margin-bottom: $app-item-line-height;
+	&.item-space {
+		margin-top: 10rpx;
+	}
+	input, picker, textarea {
+		height: 100%;
+		width: 521rpx;
+		font-size: 26rpx;
+		text-align: left;
+		color: $app-sec-text-color;
+	}
+}
+
+.kingkong { // 金刚区 样式
+	height: 346rpx;
+	margin-top: 10rpx;
+	navigator {
+		width: 25%;
+		height: 50%;
+		float: left;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		image {
+			width: 88rpx;
+			height: 88rpx;
+			margin-top: 30rpx;
+			border-radius: 50%;
+		}
+		text {
+			font-size: 32rpx;
+			margin-top: 12rpx;
+		}	
+	}
+}
+
+.big-btn { // 大按钮样式（镂空）
+	@include flex();
+	width: 630rpx;
+	height: 88rpx;
+	font-size: 34rpx;
+	margin: 88rpx auto 0;
+	border-radius: 44rpx;
+	color: $app-base-color;
+	border:2px solid $app-base-color;
+	&.bg { // 背景
+		color: #FFFFFF;
+		background: $app-base-color;
+	}
+}
+
+.small-btn { // 小按钮样式（镂空）
+	@include flex();
+	padding: 0 14rpx;
+	font-size: 26rpx;
+	margin-left: 10rpx;
+	color: $app-base-color;
+	height: 48rpx!important;
+	min-width: 106rpx!important;
+	border: 2rpx solid $app-base-color;
+	&.dank { // 小按钮 （灰色）
+		color: $app-sec-text-color;
+		border-color: $app-sec-text-color;
+	}
+}
+
+.login-btn { // 登录按钮
+	flex: 1;
+	width: 100%;
+	height: 100%;
+	background: #FFFFFF;
+	navigator {
+		@include flex();
+		top: 50%;
+		left: 50%;
+		width: 400rpx;
+		height: 88rpx;
+		color: #FFFFFF;
+		position: fixed;
+		font-size: 32rpx;
+		border-radius: 10rpx;
+		background: $app-base-color;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.ellipsis { // 文字溢出打点换行
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.icon-right { // 图标右侧空出
+	margin-right: 20rpx;
+}
+.border-right { // 右边框
+	border-right: 1rpx solid $app-base-bg;
+}
+
+.level-name {
+	@include flex();
+	width: 130rpx;
+	height: 36rpx;
+	color: #FFFFFF;
+	font-size: 20rpx;
+	border-radius: 18rpx;
+	background: $app-base-color;
+	.cuIcon-crownfill {
+		margin-right: 6rpx;
+	}
+}
+
+.position-center { // 水平垂直居中
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.data-card { // 数据卡片样式
+	@include flex();
+	width: 100%;
+	height: 336rpx;
+	position: relative;
+	background: $app-base-bg;
+	image {
+		z-index: 0;
+		width: 706rpx;
+		height: 316rpx;
+	}
+	.data-card-text {
+		width: 100%;
+		height: 100%;
+		@include flex(column);
+		.text {
+			color: #FFFFFF;
+			font-size: 32rpx;
+		}
+		.num {
+			color: #FFFFFF;
+			font-size: 70rpx;
+			margin-top: 60rpx;
+		}
+	}
+}
+
+.basecolor { // 文字 主题色
+	color: $app-base-color
+}
+
+.swiper-nav { // 滑动切换导航
+	@include flex();
+	width: 100%;
+	height: 84rpx;
+	color: #666666;
+	font-size: 32rpx;
+	position: relative;
+	background: #FFFFFF;
+	box-sizing: border-box;
+	border-bottom: 1rpx solid $app-base-bg;
+	.item {
+		@include flex();
+		flex: 1;
+		height: 100%;
+		&.active {
+			color: $app-base-color;
+		}
+	}
+	.moveBar {
+		@include flex();
+		bottom: 0;
+		height: 6rpx;
+		position: absolute;
+		> text {
+			width: 100%;
+			height: 100%;
+			border-radius: 3rpx;
+			background: $app-base-color;
+		}
+	}
+}
+
+.swiper-area { // 滑动切换内容
+	flex: 1;
+	width: 100%;
+	swiper {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.article-header { // 文章发布人信息
+	@include flex();
+	height: 120rpx;
+	justify-content: space-between;
+	border-bottom: 1rpx solid $app-base-bg;
+	.head-pic {
+		width: 80rpx;
+		height: 80rpx;
+		border-radius: 50%;
+	}
+	.name {
+		@include flex();
+		flex: 1;
+		height: 100%;
+		margin-left: 20rpx;
+		justify-content: flex-start;
+		.identity {
+			@include flex();
+			width: 56rpx;
+			height: 28rpx;
+			color: #FFFFFF;
+			font-size: 20rpx;
+			margin-left: 20rpx;
+			border-radius: 8rpx;
+			background: $app-base-color;
+		}
+	}
+	.time {
+		font-size: 24rpx;
+		color: #999999;
+		&.justnow {
+			color: $app-base-color;
+		}
+	}
+}
+
+.article-footer { // 文章点赞收藏转发
+	@include flex();
+	height: 90rpx;
+	border-top: 1rpx solid $app-base-bg;
+	.footer-item {
+		@include flex();
+		flex: 1;
+		height: 40rpx;
+		&.center {
+			border-left: 1rpx solid #CCCCCC;
+			border-right: 1rpx solid #CCCCCC;
+		}
+		.icon-right {
+			font-size: 40rpx;
+			&.fill {
+				color: $app-base-color;
+			}
+		}
+	}
+}
+
 
 /* 边框颜色 */
 $border-color: #c8c7cc;

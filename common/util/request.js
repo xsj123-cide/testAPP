@@ -2,28 +2,25 @@ import Vue from 'vue'
 import $store from '@/store'
 import uni_request from './uni_request.js'
 
-// const host = 'http://192.168.0.14'
-// const host = 'http://192.168.0.13'
-const host = 'https://xcx.ydxly.com/'
-// const host = 'http://api.app.jiuweiyun.cn'
-// const host = 'http://192.168.2.109'
+const host = 'https://xcx.ydxly.com'
 // const port = 80
-const port = 443
-const url = '/dwbsapp'
-// const url = '/api'
+// const port = 443
+// const url = '/dwbsapp'
+const url = '/api'
 
 uni.onNetworkStatusChange(res => { $store.commit('device/NETWORKTYPE_CHANGE', res.networkType) }) // 网络类型变化监听
 uni.getNetworkType({ success(res) { $store.commit('device/NETWORKTYPE_CHANGE', res.networkType) }}) // 获取网络类型
 
 const request = uni_request({
 	timeout: 12345,
-	baseURL: `${host}:${port}${url}`,
+	// baseURL: `${host}:${port}${url}`,
+	baseURL: `${host}${url}`,
 })
 
-request.interceptors.request.use(config => {
-	config.header.Authorization = 'Bearer ' + $store.state.app.token
-	return config
-})
+// request.interceptors.request.use(config => {
+// 	config.header.Authorization = 'Bearer ' + $store.state.app.token
+// 	return config
+// })
 
 request.interceptors.response.use((response, ...args) => { // 拦截器
 	uni.$emit('HIDELOADING') // 隐藏加载
@@ -50,5 +47,5 @@ request.onerror = (...args) => { // 请求失败统一处理方法
 
 export default request
 export const FlashScreenUrl = 'https://api.jiuweiyun.cn/public/uploads/images/topics/420.jpg' // app 闪屏固定url
-export const ArticleURL = `${host}:${port}${url}/article/show_article` // 文章固定链接
+// export const ArticleURL = `${host}:${port}${url}/article/show_article` // 文章固定链接
 // export const ArticleURL = `https://mp.weixin.qq.com/s/O5Q00WQhCYXI6Mky_ExPOw` // 文章固定链接

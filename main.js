@@ -1,7 +1,8 @@
 import Vue from 'vue'
-import App from '@/App'
-import $store from '@/store'
-
+import App from './App'
+import $store from './store'
+import to from './common/util/to'
+Vue.use(to);
 Vue.prototype.$store = $store // vuex
 // Vue.prototype.$offset = function (selector) { // 获取元素宽高位置信息
 // 	return new Promise((resolve, reject) => {
@@ -13,12 +14,19 @@ Vue.prototype.$store = $store // vuex
 // 	})
 // }
 
-// import CustomNav from './components/public/custom-nav.vue' //自定义头部导航栏交互组件
-// Vue.component('custom-nav', CustomNav) //注册自定义头部导航栏
+import CustomNav from './components/public/custom-nav.vue' //自定义头部导航栏交互组件
+Vue.component('custom-nav', CustomNav) //注册自定义头部导航栏
 
 // import * as filters from '@/filters'
 // Object.keys(filters).forEach(e => {
 // 	Vue.filter(e, filters[e])
 // })
 Vue.config.productionTip = false;
-;( new Vue( { ...App } ) ).$mount()
+App.mpType = 'app'
+
+const app = new Vue({
+    // store,
+    ...App
+})
+app.$mount()
+

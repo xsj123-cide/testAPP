@@ -1,5 +1,6 @@
 <template>
 	<view class="container flex-column">
+		<custom-nav ref="ltm" />
 		<img src='/static/icon/登录.png' alt="">
 		<button class="loginButton" type="primary">本机号码一键登录</button>
 		<view class="text-center">其他方式登录</view>
@@ -18,18 +19,20 @@
 			}
 		},
 		onPullDownRefresh() {
-			// this.request()
+			this.request()
 		},
 		onLoad() {
-			// console.log('1')
-			// this.request()
+			console.log('1')
+			this.request()
 		},
-		request() {
-			// console.log('2')
-			// 	index().then(res => {
-			// 		console.log(res)
-			// 	}).catch(() => setTimeout(() => this.$refs.ltm.toast('网络好像出了点问题，下拉刷新试试'), 123))
-		},
+		methods: {
+			request() {
+				console.log('2')
+					index().then(res => {
+						console.log(res)
+					}).catch(() => setTimeout(() => this.$refs.ltm.toast('网络好像出了点问题，下拉刷新试试'), 123))
+			},
+		}
 	}
 </script>
 
