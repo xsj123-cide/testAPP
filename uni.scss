@@ -20,11 +20,20 @@ $color-success: #4cd964;
 $color-warning: #f0ad4e;
 $color-error: #dd524d;
 
-$app-base-bg: #F2F2F2; // app 页面背景色
-$app-base-color: #F76454; // app 主题颜色
+$app-base-bg: #ececec; // app 页面背景色
+$app-base-color: #ee5a54; // app 主题颜色
 $app-sec-text-color: #999999; // app 次要文字颜色
 $app-main-text-color: #333333; // app 主题文字颜色
 $app-tabbar-height: 98rpx; // app tabbar高度
+
+/* 文字尺寸 */
+$font-size-extra-sm: 22rpx;
+$font-size-sm: 24rpx;
+$font-size-base: 26rpx;
+$font-size-medium: 28rpx;
+$font-size-lg: 32rpx;
+$font-size-extra-lg: 36rpx;
+$font-size-big: 80rpx;
 
 
 /* 文字基本颜色 */
@@ -43,7 +52,7 @@ $bg-color-grey: #f9f9f9;
 $bg-color-hover: #f1f1f1; //点击状态颜色
 $bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色
 
-$app-nav-height: 128rpx; // app 导航栏高度
+$app-nav-height: 150rpx; // app 导航栏高度
 $app-item-height: 90rpx; // app 功能列表项高度
 $app-item-line-height: 2rpx; // app 功能列表项分割线高度
 $app-item-padding-width: 30rpx; // app 功能列表项左右空白宽度
@@ -62,10 +71,10 @@ $app-item-padding-width: 30rpx; // app 功能列表项左右空白宽度
 	}
 }
 
-@mixin flex($c: row) {
+@mixin flex($c: row,$d:start) {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: $d;
 	flex-direction: $c;
 }
 
@@ -332,13 +341,6 @@ $border-color: #c8c7cc;
 
 /* 尺寸变量 */
 
-/* 文字尺寸 */
-$font-size-extra-sm: 22rpx;
-$font-size-sm: 24rpx;
-$font-size-base: 26rpx;
-$font-size-medium: 28rpx;
-$font-size-lg: 32rpx;
-$font-size-extra-lg: 36rpx;
 
 /* 图片尺寸 */
 $img-size-sm: 40rpx;

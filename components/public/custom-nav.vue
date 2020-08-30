@@ -3,11 +3,14 @@
 		<navigator open-type="navigateBack" v-if="!noback" class="back" :class="bangs ? 'bangs' : ''" @tap="tapLeft">
 			<text class="cuIcon-back"></text>
 		</navigator>
-		<view class="center" :class="bangs ? 'bangs' : ''" @tap="tapCenter">
+		<view class="left" v-if="left" :class="{ bangs: bangs, color: color }" >
 			<text>{{ title }}</text>
 		</view>
-		<view class="right" :class="{ bangs: bangs, color: color }" @tap="tapRight">
-			<slot></slot>
+		<view class="center" v-if="center" :class="bangs ? 'bangs' : ''" @tap="tapCenter">
+			<text>{{ title }}</text>
+		</view>
+		<view class="right"  v-if="right" :class="{ bangs: bangs, color: color }" @tap="tapRight">
+			<slot name="right">></slot>
 		</view>
 		
 		
@@ -39,10 +42,13 @@
 	const eventBUS = new Vue()
 	export default {
 		props: {
-			color: String,
+			color: Boolean,
 			title: String,
-			noback: String,
-			transparent: String
+			noback: Boolean,
+			transparent: String,
+			left: Boolean,
+			center: Boolean,
+			right: Boolean
 		},
 		data() {
 			return {
@@ -143,7 +149,7 @@
 		background: #FFFFFF;
 		box-sizing: border-box;
 		height: $app-nav-height;
-		box-shadow: 0px 1px 0px 0px rgba(178, 178 ,178 ,1);
+		// box-shadow: 0px 1px 0px 0px rgba(178, 178 ,178 ,1);
 		&.transparent {
 			box-shadow: none;
 			background: transparent;
@@ -165,6 +171,25 @@
 			&.bangs {
 				text {
 					margin-bottom: 12rpx;
+				}
+			}
+		}
+		.left {
+			flex: 1;
+			height: 100%;
+			text {
+				left: 15%;
+				bottom: 24rpx;
+				position: absolute;
+				transform: translateX(-50%);
+			}
+			&.color {
+				color: $text-color-inverse;
+				background-color: $app-base-color;
+			}
+			&.bangs {
+				text {
+					bottom: 12rpx;
 				}
 			}
 		}
