@@ -1,16 +1,17 @@
 <template>
 	<view class="custom-nav" v-show="title" :class="{ transparent: transparent, hide: !title }">
 		<navigator open-type="navigateBack" v-if="!noback" class="back" :class="bangs ? 'bangs' : ''" @tap="tapLeft">
-			<text class="cuIcon-back"></text>
+			<!-- <text class="cuIcon-back"></text> -->
+			<view class="cuIcon-back"></view>
 		</navigator>
 		<view class="left" v-if="left" :class="{ bangs: bangs, color: color }" >
 			<text>{{ title }}</text>
 		</view>
-		<view class="center" v-if="center" :class="bangs ? 'bangs' : ''" @tap="tapCenter">
+		<view class="center" v-if="center" :class="{ bangs: bangs, color: color }" @tap="tapCenter">
 			<text>{{ title }}</text>
 		</view>
 		<view class="right"  v-if="right" :class="{ bangs: bangs, color: color }" @tap="tapRight">
-			<slot name="right">></slot>
+			<slot name="right"></slot>
 		</view>
 		
 		
@@ -48,15 +49,18 @@
 			transparent: String,
 			left: Boolean,
 			center: Boolean,
-			right: Boolean
+			right: Boolean,
+			modalShow : Boolean,
+			modalTitle: String,
+			modalMessages: Array
 		},
 		data() {
 			return {
 				LOADING: false,
-				modalTitle: '', // 提示标题
-				modalMessages: [], // 提示信息
+				// modalTitle: '', // 提示标题
+				// modalMessages: [], // 提示信息
 				modalAsync: true, // 延迟消失
-				modalShow: false, // 是否显示 modal
+				// modalShow: false, // 是否显示 modal
 				modalNoCancel: false, // 是否显示取消按钮
 				toastMessage: '', // toast 消息提示
 				toastTop: '', // toast 位置
@@ -81,6 +85,13 @@
 		methods: {
 			tapLeft() {
 				this.$emit('lTap')
+				// let pages = getCurrentPages(); // 当前页面
+				// let beforePage = pages[pages.length - 2]; // 前一个页面
+				// uni.navigateBack({
+				// 	success: function() {
+				// 		beforePage.onLoad();
+				// 	}
+				// });
 			},
 			tapCenter() {
 				this.$emit('cTap')
@@ -96,10 +107,10 @@
 			},
 			
 			modalCancel() { // modal点击取消
-				eventBUS.$emit('cancel')
+				this.$emit('cancel')
 			},
 			modalConfire() { // modal点击确定
-				eventBUS.$emit('confire')
+				this.$emit('confire')
 			},
 			modal(title, message, noCancel) { // 弹出 modal
 				noCancel ? this.modalNoCancel = true : ''
@@ -146,7 +157,8 @@
 		@include flex();
 		position: fixed;
 		font-size: 40rpx;
-		background: #FFFFFF;
+		// background: #FFFFFF;
+		background-color: $app-base-color;
 		box-sizing: border-box;
 		height: $app-nav-height;
 		// box-shadow: 0px 1px 0px 0px rgba(178, 178 ,178 ,1);
@@ -173,6 +185,15 @@
 					margin-bottom: 12rpx;
 				}
 			}
+		}
+		.cuIcon-back {
+			height: 28rpx;
+			width: 28rpx;
+			bottom: 30rpx;
+			position: absolute;
+			border-top: 4rpx white solid;
+			border-left: 4rpx white solid;
+			transform: rotate(-45deg);
 		}
 		.left {
 			flex: 1;
@@ -201,6 +222,11 @@
 				bottom: 24rpx;
 				position: absolute;
 				transform: translateX(-50%);
+				color: $text-color-inverse;
+			}
+			&.color {
+				color: $text-color-inverse;
+				background-color: $app-base-color;
 			}
 			&.bangs {
 				text {
@@ -214,12 +240,13 @@
 			width: 180rpx;
 			font-size: 28rpx;
 			padding-bottom: 28rpx;
+			padding-right: 20rpx;
 			align-items: flex-end;
 			box-sizing: border-box;
 			justify-content: flex-end;
 			color: $app-main-text-color;
 			&.color {
-				color: $app-base-color;
+				color: $text-color-inverse;
 			}
 			&.bangs {
 				padding-bottom: 16rpx;
@@ -259,6 +286,7 @@
 			bottom: 0;
 			z-index: 999;
 			position: fixed;
+			justify-content: center !important;
 			background: rgba(1, 1, 1, .4);
 			&.in {
 				animation: bg-in .2s;
@@ -274,6 +302,7 @@
 				min-height: 25%;
 				border-radius: 8rpx;
 				background: #FFFFFF;
+				padding: 0rpx 80rpx;
 				&.in {
 					animation: modal-in .2s;
 					animation-fill-mode: forwards;
@@ -286,18 +315,16 @@
 					@include flex();
 					width: 100%;
 					height: 100rpx;
-					font-size: 42rpx;
-					color: $app-base-color;
+					font-size: 40rpx;
+					font-weight: 800;
 				}
 				.message {
 					@include flex(column);
 					flex: 1;
 					width: 100%;
-					padding: 30rpx;
+					// padding: 30rpx;
 					font-size: 32rpx;
 					box-sizing: border-box;
-					border-top: 2rpx solid #EEEEEE;
-					border-bottom: 2rpx solid #EEEEEE;
 					view {
 						@include flex();
 						flex: 1;
@@ -307,20 +334,24 @@
 					}
 				}
 				.btn {
-					@include flex();
+					@include flex(row, space-between);
 					width: 100%;
 					height: 100rpx;
-					text {
-						@include flex();
-						flex: 1;
-						height: 100%;
-						font-size: 32rpx;
-						color: $app-base-color;
-						&.cancel {
-							color: $app-sec-text-color;
-							border-right: 2rpx solid #EEEEEE;
-						}
-					}
+					font-size: 28rpx;
+					font-weight: 800;
+					color: $color-success;
+					// text {
+					// 	@include flex(row,center);
+					// 	flex: 1;
+					// 	height: 100%;
+					// 	font-size: 28rpx;
+					// 	font-weight: 800;
+					// 	color: $color-success;
+					// 	&.cancel {
+					// 		color: $app-sec-text-color;
+					// 		// border-right: 2rpx solid #EEEEEE;
+					// 	}
+					// }
 				}
 			}
 		}

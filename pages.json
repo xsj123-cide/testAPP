@@ -17,7 +17,61 @@
 				"navigationStyle": "custom"
 			}
         }
-	],
+	    ,{
+            "path" : "pages/order/order",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/mine/mine",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/mine/setting/setting",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/mine/myInfo/myInfo",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/mine/myTaocan/myTaocan",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/pay/successPay/successPay",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+    ],
 	"tabBar": {
 		"color": "#bfbfbf",
 		"selectedColor": "#d81e06",
@@ -35,13 +89,13 @@
 			},
 			{
 				"text": "订单",
-				"pagePath": "pages/index-data/index-data",
+				"pagePath": "pages/order/order",
 				"iconPath": "static/icon/index/tabbar/order.png",
 				"selectedIconPath": "static/icon/index/tabbar/order_active.png"
 			},
 			{
 				"text": "我",
-				"pagePath": "pages/index-my/index-my",
+				"pagePath": "pages/mine/mine",
 				"iconPath": "static/icon/index/tabbar/mine.png",
 				"selectedIconPath": "static/icon/index/tabbar/mine_active.png"
 			}
