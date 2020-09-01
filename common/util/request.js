@@ -2,7 +2,8 @@ import Vue from 'vue'
 import $store from '@/store'
 import uni_request from './uni_request.js'
 
-const host = 'https://xcx.ydxly.com'
+// const host = 'http://www.shangji123.com'
+// const host=''
 // const port = 80
 // const port = 443
 // const url = '/dwbsapp'
@@ -14,18 +15,20 @@ uni.getNetworkType({ success(res) { $store.commit('device/NETWORKTYPE_CHANGE', r
 const request = uni_request({
 	timeout: 12345,
 	// baseURL: `${host}:${port}${url}`,
-	baseURL: `${host}${url}`,
+	baseURL: `${url}`,
 })
 
 // request.interceptors.request.use(config => {
-// 	config.header.Authorization = 'Bearer ' + $store.state.app.token
-// 	return config
+// 	// config.header.Authorization = 'Bearer ' + $store.state.app.token
+// 	return config;
 // })
 
 request.interceptors.response.use((response, ...args) => { // 拦截器
 	uni.$emit('HIDELOADING') // 隐藏加载
 	uni.stopPullDownRefresh() // 停止下拉刷新
+	// #ifdef APP-PLUS
 	plus.nativeUI.closeWaiting() // 停止loading
+	// #endif
 	if (response.data.code === 1) { 
 		// if (+response.data.code === 202) {
 			uni.$emit('TOAST', response.data.data)

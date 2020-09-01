@@ -62,7 +62,7 @@
 				current: 0,
 				currentMoney:0,
 				modalShow:false,
-				modalMessages : ['确定要支付宝支付吗'],
+				modalMessages : ['确定要账户余额支付吗'],
 				taocanList:[
 					{
 						num: 2,
@@ -121,6 +121,8 @@
 			},
 			show(){
 				this.modalShow = true;
+				let nowindex = this.current;
+				this.modalMessages[0] = '确定要'+this.items[nowindex].name+'吗？';
 			},
 			cancelShow() {
 				this.modalShow = false;

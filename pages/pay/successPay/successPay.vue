@@ -74,6 +74,7 @@
 .pay-top-info {
 	margin: 0 auto;
 	background: #fff;
+	position: relative;
 	width: 92%;
 	height: 230rpx;
 	border-bottom: 1px dashed #eaeaea;
@@ -88,6 +89,23 @@
 		font-size: 100rpx;
 	}
 	}
+}
+.pay-top-info::after,
+.pay-top-info::before {
+	content: '';
+	position: absolute;
+	bottom: -15rpx;
+	height: 35rpx;
+	width: 35rpx;
+	border-radius: 15rpx;
+	background-color:  $bg-color;
+}
+.pay-top-info::before {
+	left: -20rpx;
+
+}
+.pay-top-info::after {
+	right: -20rpx;
 }
 .order-infoa {
 		background: #fff;

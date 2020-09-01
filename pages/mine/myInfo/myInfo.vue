@@ -22,22 +22,26 @@
 </template>
 
 <script>
+	import { getUserInfo } from '@/api/mine.js'
 	export default {
 		data() {
 			return {
 				title:'我的资料',
 				itema: [
 					{
+						nickname:'userName',
 						name:'姓名',
 						placeholder:'姓名',
 						type:'input'
 					},
 					{
+						nickname:'com',
 						name:'公司',
 						placeholder:"公司名称",
 						type:'input'
 					},
 					{
+						nickname:'com',
 						name:'地址',
 						placeholder:'公司地址',
 						type:'input'
@@ -47,11 +51,27 @@
 						placeholder:'公司地址',
 						type:'file'
 					},
-				]
+				],
+				userInfo:{}
 			}
 		},
+		onLoad() {
+			console.log('load...');
+			this.getData();
+		},
 		methods: {
-			
+			getData(){
+				// this.userInfo = uni.getStorageSync('userInfo');
+				console.log('request...')
+					let data = {};
+					data.key = 'my_info'     
+					// data.pushClientInfo=JSON.stringify(common.getCache("pushClientInfo"));
+					getUserInfo(data).then(res => {
+						if(res.code == 1) {
+							console.log(res)
+						}
+				})
+			}
 		}
 	}
 </script>
