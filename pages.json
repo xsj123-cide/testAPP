@@ -116,6 +116,15 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/minesj/minesj",
+            "style" : {
+							"navigationStyle": "custom",			
+							"app-plus": {
+							"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+						}
+        }
     ],
 	"tabBar": {
 		"color": "#bfbfbf",
