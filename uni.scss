@@ -20,7 +20,7 @@ $color-success: #52805b;
 $color-warning: #f0ad4e;
 $color-error: #dd524d;
 
-$app-base-bg: #ececec; // app 页面背景色
+$app-base-bg: #f7f8fc; // app 页面背景色
 $app-base-color: #ee5a54; // app 主题颜色
 $app-sec-text-color: #999999; // app 次要文字颜色
 $app-main-text-color: #333333; // app 主题文字颜色
@@ -58,10 +58,11 @@ $app-item-line-height: 2rpx; // app 功能列表项分割线高度
 $app-item-padding-width: 30rpx; // app 功能列表项左右空白宽度
 
 @mixin page {
-	height: 100%;
+	// height: 100%;
 	box-sizing: border-box;
 	flex-direction: column;
 	background: $bg-color;
+	padding-bottom: 130rpx;
 	border-top: $app-nav-height solid #FFFFFF;
 	.content {
 		flex: 1;

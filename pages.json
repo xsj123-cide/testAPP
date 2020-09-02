@@ -1,6 +1,15 @@
 {
 	"pages": [ 
 		{
+            "path" : "pages/index/index/index",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        },
+		{
             "path" : "pages/login/ortherLogin/ortherLogin",
             "style" : {
 				"navigationStyle": "custom",			
@@ -80,9 +89,26 @@
 				}
 			}
         }
-        
         ,{
-            "path" : "pages/index/index/index",
+            "path" : "pages/mine/wode/wode",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/sjcenter/sjcenter",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
+        }
+        ,{
+            "path" : "pages/pay/payDetail/payDetail",
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
@@ -101,8 +127,14 @@
 		"height": "49px",
 		"list": [
 			{
-				"text": "套餐",
-				"pagePath": "pages/index/index",
+				"text": "首页",
+				"pagePath": "pages/index/index/index",
+				"iconPath": "static/icon/index/tabbar/taocan.png",
+				"selectedIconPath": "static/icon/index/tabbar/taocan_active.png"
+			},
+			{
+				"text": "商机中心",
+				"pagePath": "pages/sjcenter/sjcenter",
 				"iconPath": "static/icon/index/tabbar/taocan.png",
 				"selectedIconPath": "static/icon/index/tabbar/taocan_active.png"
 			},
@@ -114,7 +146,7 @@
 			},
 			{
 				"text": "我",
-				"pagePath": "pages/mine/mine",
+				"pagePath": "pages/mine/wode/wode",
 				"iconPath": "static/icon/index/tabbar/mine.png",
 				"selectedIconPath": "static/icon/index/tabbar/mine_active.png"
 			}

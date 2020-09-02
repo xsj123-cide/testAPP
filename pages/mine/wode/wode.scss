@@ -1,0 +1,49 @@
+.wode {
+    @include page();
+    border-top :none
+}
+.contenta {
+    padding: 0rpx 20rpx;
+    z-index: 999;
+    p {
+        font-weight: 700;
+        font-size: 31rpx;
+    }
+    .wode_info {
+        background-color: white;
+        border-radius: 30rpx;
+        margin-top: 20rpx;
+        .indo_item {
+            border-top: solid #f0f0f0 1rpx;
+            @include flex (row,space-between);
+            padding: 36rpx 30rpx;
+            color: rgb(167, 164, 164);
+            image {
+                height: 40rpx;
+                width: 40rpx;
+                margin-right: 20rpx;
+            }
+            .item_textOne {
+                font-size: 30rpx;
+            }
+            &>view {
+                @include flex (row); 
+            }
+            .item_right {
+                color: black;
+                font-size: 30rpx;
+            }
+            .item_right_icon {
+                height: 18rpx;
+                width: 18rpx;
+                margin-left: 10rpx;
+                border-top: gray solid 1rpx !important;
+                border-right: gray solid 1rpx !important;
+                transform: rotate(45deg) !important;
+            }
+        }
+        .indo_item:first-child {
+            border-top: none;
+        }
+    }
+}
