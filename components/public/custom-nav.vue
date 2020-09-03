@@ -1,5 +1,5 @@
 <template>
-	<view class="custom-nav" v-show="title" :class="{ transparent: transparent, hide: !title }">
+	<view class="custom-nav"  :class="{ transparent: transparent }">
 		<navigator open-type="navigateBack" v-if="!noback" class="back" :class="bangs ? 'bangs' : ''" @tap="tapLeft">
 			<!-- <text class="cuIcon-back"></text> -->
 			<view class="cuIcon-back"></view>

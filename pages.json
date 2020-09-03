@@ -119,11 +119,65 @@
         ,{
             "path" : "pages/minesj/minesj",
             "style" : {
-							"navigationStyle": "custom",			
-							"app-plus": {
-							"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"navigationStyle": "custom",			
+					"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					}
 				}
-						}
+        }
+        ,{
+            "path" : "pages/order/orderDetail/orderDetail",
+            "style" : {
+				"navigationStyle": "custom",			
+					"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					}
+			}
+        }
+        ,{
+            "path" : "pages/minedp/minedp",
+            "style" : {
+				"navigationStyle": "custom",			
+					"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					}
+			}
+        }
+        ,{
+            "path" : "pages/mine/huiyuan/huiyuan",
+            "style" : {
+				"navigationStyle": "custom",			
+					"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					}
+			}
+        }
+        ,{
+            "path" : "pages/msCenter/msCenter",
+            "style" : {
+				"navigationStyle": "custom",			
+					"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					}
+			}
+        }
+        ,{
+            "path" : "pages/msCenter/msDetail/msDetail",
+            "style" : {
+				"navigationStyle": "custom",			
+					"app-plus": {
+					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					}
+			}
+        }
+        ,{
+            "path" : "pages/login/regist/regist",
+            "style" : {
+				"navigationStyle": "custom",			
+				"app-plus": {
+				"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				}
+			}
         }
     ],
 	"tabBar": {
@@ -148,8 +202,8 @@
 				"selectedIconPath": "static/icon/index/tabbar/taocan_active.png"
 			},
 			{
-				"text": "订单",
-				"pagePath": "pages/order/order",
+				"text": "信息",
+				"pagePath": "pages/msCenter/msCenter",
 				"iconPath": "static/icon/index/tabbar/order.png",
 				"selectedIconPath": "static/icon/index/tabbar/order_active.png"
 			},

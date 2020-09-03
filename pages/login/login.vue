@@ -1,12 +1,23 @@
 <template>
-	<view class="container flex-column">
-		<custom-nav ref="ltm" />
-		<img src='/static/icon/登录.png' alt="">
-		<button class="loginButton" type="primary">本机号码一键登录</button>
-		<view class="text-center">其他方式登录</view>
-		<view class="bottom position-absolute">
-			使用手机号码一键登录即带白哦您已同意《ssss》和《wwww》并使用本机号码登录
+	<view class="login">
+		<custom-nav :title="title" center  right>
+			<view slot="right" @tap="toPath({url:'/pages/login/regist/regist'})">注册</view>
+		</custom-nav>
+		<view class="containera">
+			<image class="icon" src='/static/icon/login/icon.png'></image>
+			<p>135****0033</p>
+			<view class="text-center">本机号码</view>
+			<button class="loginButton" type="primary">同意协议并一键登录</button>
+			<button class="aabuttom" @tap="toPath({url:'/pages/login/ortherLogin/ortherLogin'})">使用其他手机号登录</button>
+			<view class="bottom position-absolute">
+				<view> 登录即同意《使用协议》&《隐私政策》</view>
+				<view>&《中国移动认证服务条款》</view>
+			</view>
+
+			<image class="imgLeft" src="/static/icon/login/bottom_left.png"></image>
+			<image class="imgRight" src="/static/icon/login/borrom_right.png"></image>
 		</view>
+		
 	</view>
 </template>
 
@@ -15,7 +26,7 @@
 	export default {
 		data() {
 			return {
-				
+				title:''
 			}
 		},
 		onPullDownRefresh() {
@@ -37,31 +48,5 @@
 </script>
 
 <style lang="scss" scode>
-img {
-	height: 100rpx;
-	width: 100rpx;
-	margin-top: 100rpx;;
-}
-button{
-	background-color: $color-error;
-	border-radius: 60rpx;
-	font-size: $font-size-extra-lg;
-}
-.loginButton {
-	margin-top: 330rpx;
-}
-.container {
-	padding: 30rpx 50rpx;
-	text-align: center;
-}
-.bottom {
- bottom: 30rpx;
- font-size: $font-size-base;
- color: gray;
-}
-.text-center {
-	color: gray;
-	padding-top: 30rpx;
-	font-size: $font-size-sm;
-}
+@import './login'
 </style>

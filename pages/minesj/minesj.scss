@@ -83,5 +83,73 @@
   }
 }
 .order {
-  
+  background-color: white;
+  border-radius: 30rpx;
+  margin: 0rpx 20rpx;
+  margin-top: 20rpx;
+  &>view {
+    padding: 20rpx 30rpx;
+  }
+  .order_top {
+    @include flex(row,space-between);
+    font-size: 26rpx;
+    border-bottom: rgb(235, 235, 235) solid 1rpx;
+    .icon-mulu {
+      margin-right: 15rpx;
+      color: rgb(160, 158, 158);
+    }
+    .top_right {
+      color: rgb(180, 180, 180);
+    }
+  }
+  .order_mediu {
+    font-size: 26rpx;
+    position: relative;
+    // border-bottom: rgb(235, 235, 235) dashed 1rpx;
+    .mediu_item {
+      @include flex(row, space-between);
+      line-height: 40rpx;
+      span:first-child {
+        color: rgb(160, 158, 158);
+      }
+    }
+  }
+  .order_mediu::before ,
+  .order_mediu::after
+  {
+    content: '';
+    position: absolute;
+    height: 40rpx;
+    width: 40rpx;
+    bottom: -20rpx;
+    border-radius: 50rpx;
+    background-color: $app-base-bg;
+  }
+  .order_mediu::before {
+    left: -16rpx;
+  }
+  .order_mediu::after {
+    right: -16rpx;
+  }
+  .dashed {
+    height: 1px;
+    background: linear-gradient(to right, rgb(201, 201, 201), rgb(211, 211, 211) 8.67px, transparent 8.67px, transparent);
+    background-size: 13px 100%;
+}
+}
+.order_bottom {
+  @include flex(row,space-between);
+  font-size: 26rpx;
+  bottom-bottom: rgb(235, 235, 235) solid 1rpx;
+  color: rgb(160, 158, 158);
+  .icon-huabanfuben {
+    margin-right: 15rpx;
+  }
+  .bottom_right {
+    // color: rgb(180, 180, 180);
+    color: #fbab00;
+    border: #fbab00 solid 1rpx;
+    border-radius: 20rpx;
+    padding: 5rpx 20rpx;
+  }
 }

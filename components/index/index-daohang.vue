@@ -12,7 +12,7 @@
 		<view class="first-content">
 			<p>我的店铺</p>
 			<view class="content-item">
-				<view class="_item" v-for="(item,index) in itemList['1']" :key="index">
+				<view class="_item" v-for="(item,index) in itemList['1']" :key="index" @tap="toPath({url:'/pages/minedp/minedp'})">
 					<image :src='item.url' />
 					<p>{{item.name}}</p>
 				</view>

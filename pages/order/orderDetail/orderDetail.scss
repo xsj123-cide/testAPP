@@ -1,0 +1,145 @@
+.orderDetail {
+    @include page();
+  }
+  .custom-nav {
+    background-color: white;
+    /deep/ .center {
+        span {
+            color:black
+        }
+    }
+    /deep/ .back {
+      .cuIcon-back {
+          border-top: 2px grey solid;
+          border-left: 2px grey solid;
+      }
+  }  
+  }
+
+  .first {
+     background-color: white;
+     margin: 0rpx 20rpx;
+     margin-top: 20rpx; 
+     border-radius: 20rpx;
+     &>view {
+         padding: 14rpx 20rpx;
+     }
+
+     .first_items {
+        @include flex(row,space-between);
+        height: auto;
+        font-size: 26rpx;
+        .item_name {
+            color: rgb(185, 185, 185);
+            flex:1;
+        }
+
+        .item_content {
+            flex:4;
+            text-align: right;
+        }
+        .aa{
+            text-align: left;
+            line-height: 45rpx;
+        }
+        .ptop {
+            align-items:start;
+        }
+    }
+     .title {
+        @include flex(row,space-between);
+        font-size: 26rpx;
+        border-bottom: rgb(235, 235, 235) solid 1rpx;
+        .icon-mulu {
+          margin-right: 15rpx;
+          color: rgb(160, 158, 158);
+        }
+        .title_right {
+          color: $app-base-color;
+          border-radius: 20rpx;
+          border: $app-base-color solid 1rpx;
+          padding: 5rpx 20rpx;
+        }
+      }
+  }
+  .second {
+    background-color: white;
+    margin: 0rpx 20rpx;
+    margin-top: 20rpx; 
+    border-radius: 20rpx;
+    font-size: 26rpx;
+    &>view {
+        padding: 14rpx 20rpx;
+    }
+    .second_title {
+        border-bottom: solid rgba(223, 223, 223,.8) 1rpx;
+        @include flex();
+        .icon-mulu {
+            margin-right: 15rpx;
+            color: rgb(160, 158, 158);
+          }
+        }
+    .second_bottom {
+        padding: 30rpx 48rpx;
+        .second_bottom_item {
+            position: relative;
+            border-left: solid 1rpx rgb(199, 199, 199);
+            color: rgb(199, 199, 199);
+            .step {
+                font-size: 30rpx;
+                padding-left: 40rpx;
+                flex-wrap: wrap;
+            }
+            .time {
+                font-size: 25rpx;
+                padding-left: 40rpx;
+                padding-bottom: 40rpx;
+            }
+            .icon-dagou {
+                position: absolute;
+                font-size: 40rpx;
+                top: -6rpx;
+                left: -20rpx;
+            }
+        }
+        .second_bottom_item:last-child {
+            border-left: none;
+        }
+    }
+  }
+.bg {
+    color: $app-base-color;
+    }
+.bor {
+    border-left: solid 1rpx $app-base-color !important;
+
+}
+.arrive {
+    color: black;
+}
+.bottomButom {
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    height: 80rpx;
+    @include flex(row);
+    background: -webkit-linear-gradient(left, #fe5c34, #fb2866);
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(left, #fe5c34, #fb2866);
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(left, #fe5c34, #fb2866);
+	/* Firefox 3.6 - 15 */
+	background: linear-gradient(to left, #fe5c34, #fb2866);
+    .bottomButom_item{
+        flex: 1;
+        color: white;
+        font-size: 30rpx;
+        text-align: center;
+        span {
+            margin-right: 10rpx;
+        }
+    }
+    .bottomButom_item:first-child {
+        border-right: solid 1rpx white;
+    }
+}

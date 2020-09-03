@@ -18,7 +18,7 @@
 				</view>
 			</view>
 			<!-- 手机登陆按钮 -->
-			<button class="buttonOne" @tap='Login'> 手机登陆</button>
+			<button class="buttonOne" @tap='Login'> 登陆</button>
 			<image class="imgLeft" src="/static/icon/login/bottom_left.png"></image>
 			<image class="imgRight" src="/static/icon/login/borrom_right.png"></image>
 
@@ -31,7 +31,7 @@
 	export default {
 		data() {
 			return {
-				title: '手机号登录',
+				title: '手机号注册',
 				phoneNum:'',
 				passCode:'',
 			};
@@ -64,19 +64,6 @@
 				this.passCode = e.detail.value
 			},
 			request() {
-				// 	console.log('request...')
-				// 	let data = {};
-				// 	data.mobile = this.phoneNum;  
-				// 	data.code = this.passCode ;     
-				// 	// data.pushClientInfo=JSON.stringify(common.getCache("pushClientInfo"));
-				// 	Login(data).then(res => {
-				// 		if(res.code == 1) {
-				// 			uni.setStorageSync('userInfo', res.data.userInfo); 
-				// 			uni.switchTab({
-				// 				url: `/pages/index/index`
-				// 			})
-				// 		}
-				// })
 				uni.switchTab({
 					url: `/pages/index/index`
 				})
@@ -86,5 +73,5 @@
 </script>
 
 <style lang="scss" scoped>
-@import './ortherLogin'
+@import '../ortherLogin/ortherLogin.scss'
 </style>

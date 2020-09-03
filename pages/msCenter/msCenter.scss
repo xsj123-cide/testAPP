@@ -1,0 +1,64 @@
+.msCenter {
+    @include page();
+  }
+  .custom-nav {
+    background-color: white;
+    /deep/ .center {
+        span {
+            color:black
+        }
+    } 
+}
+.ms_item {
+    background-color: white;
+    padding: 10rpx 20rpx;
+    border-radius: 20rpx;
+    margin: 0rpx 20rpx;
+    margin-top: 20rpx;
+    .item_top {
+        @include flex(row,space-between);
+        padding: 10rpx 0rpx;
+
+        image {
+            height: 50rpx;
+            width: 50rpx;
+            margin-right: 10rpx;
+        }
+        .top_right {
+            font-size: 26rpx;
+            margin-right: 8rpx;
+            color: gray;
+        }
+        .top_left {
+            @include flex(row);
+            align-items: center;
+            view {
+                font-size: 30rpx;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.item_bottom {
+    padding: 17rpx 0rpx;
+    @include flex(row,space-between);
+    &>view:first-child {
+        font-weight: 600;
+        font-size: 26rpx;
+    }
+    border-top: rgba(228, 228, 228,.7) solid 1rpx;
+}
+.item_media {
+    width: 100%;
+    margin: 30rpx 0rpx;
+    color: gray;
+    font-size: 28rpx;
+    height: 86rpx;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+}

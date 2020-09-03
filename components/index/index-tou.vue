@@ -7,7 +7,7 @@
 					<p>欢迎来到商机之家</p>
 					<p>好商机，从这里开始</p>
 				</view>
-				<button>开通会员</button>
+				<button @tap="toPath({url:'/pages/mine/huiyuan/huiyuan'})">开通会员</button>
 			</view>
     </view>
 </template>

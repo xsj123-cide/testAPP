@@ -41,6 +41,20 @@
 				</view>
 			</view>
 		</view>
+		<view v-if="modalShow ==true" class="zhezhao"></view>
+		<view v-if="modalShow ==true" :class="modalShow? 'in tanc' :'out'">
+			<image class="imgright" src="/static/img/index/tan_right.png"></image>
+			<image class="imgleft" src="/static/img/index/tan_left.png"></image>
+			<view class="tan_title">欢迎使用商家之家</view>
+			<view class="tan_content">
+				为了更好地保护您的权益，同时遵守相关监管要求。我们将
+				通过《隐私政策》向您说明我们会如何收集、存储、保护和使用您的信息。
+			</view>
+			<view class="tan_button">
+				<button class="buttonOne" @tap="quxiao">取消</button>
+				<button class="buttonTwo" @tap="quxiao">同意</button>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -55,6 +69,7 @@
 		data() {
 			return {
 				itemList:{},
+				modalShow:true,
 				zhiboList:[
 					{
 						url: '/static/img/index/zhanshi/zhiboa.png',
@@ -88,7 +103,9 @@
 			}
 		},
 		methods: {
-			
+			quxiao() {
+				this.modalShow = false;
+			}
 		}
 	}
 </script>

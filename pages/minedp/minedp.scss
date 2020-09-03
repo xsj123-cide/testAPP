@@ -1,0 +1,35 @@
+.minedp {
+    @include page();
+  }
+  .custom-nav {
+    background-color: white;
+    /deep/ .center {
+        span {
+            color:black
+        }
+    }
+    /deep/ .back {
+      .cuIcon-back {
+          border-top: 2px grey solid;
+          border-left: 2px grey solid;
+      }
+  }  
+}
+.dptop {
+  height: 400rpx;
+  background-image: url('/static/img/dp/top.png');
+  background-size:100% 100%;
+  position: relative;
+
+}
+.dianp{
+  position: absolute;
+  // border: rgb(54, 54, 32) solid 1rpx;
+  left: 0rpx;
+  right: 0rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  background-color: white;
+  height: 320rpx;
+  width: 688rpx;
+}

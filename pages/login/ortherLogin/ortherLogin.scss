@@ -1,0 +1,111 @@
+.ortherLogin {
+    @include page();
+    height: 100%;
+	background-color: white;
+}
+.custom-nav {
+    background-color: white;
+    border-bottom: rgba(212, 212, 212,.4) solid 3rpx;
+    /deep/ .center {
+        span {
+            color:black
+        }
+    }
+    /deep/ .back {
+      .cuIcon-back {
+          border-top: 2px grey solid;
+          border-left: 2px grey solid;
+      }
+  }  
+}
+.testOne {
+	margin: 20rpx;
+	font-size: $font-size-lg;
+	text-align: center;
+}
+.content {
+    padding: 0rpx 60rpx;
+    @include flex (column);
+    align-items: center;
+    .icon {
+        height: 200rpx;
+        width: 200rpx;
+        margin-top: 200rpx;
+    }
+}
+.input {
+    margin-top: 80rpx;
+    width:654rpx;
+	.input_info {
+		@include flex(row);
+		border-bottom: rgb(224, 222, 222) solid 1rpx;
+		padding: 20rpx;
+		image{
+			height: 45rpx;
+			width: 45rpx;
+            margin-right: 20rpx;
+            
+		}
+		input {
+			font-size: 28rpx;
+		}
+	}
+	.s-between {
+		&>view {
+			@include flex(row)
+		}
+		&>view:last-child {
+            color: rgb(189, 189, 189);
+            
+        }
+        &>view:last-child::before {
+            content: '|';
+            color: rgb(189, 189, 189);
+            margin-right: 20rpx;
+        }
+		@include flex(row,space-between);
+		font-size: 28rpx;
+	}
+}
+.loginButton {
+	margin: 60rpx 0rpx;
+	text-align: center;
+	color: white;
+	font-size: 28rpx;	
+	border-radius: 50rpx;
+	background-color: $app-base-color;
+}
+.buttonOne {
+	position: fixed;
+	bottom: 600rpx;
+	width: 90%;
+	left: 0rpx;
+	right: 0rpx;
+	margin: 0 auto;
+	padding: 5rpx;
+	color: white;
+	font-size: $font-size-lg;
+	border-radius: 50rpx !important;
+	background: -webkit-linear-gradient(left, #ff3f4c, #fe7251);
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #ff3f4c, #fe7251);
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #ff3f4c, #fe7251);
+	/* Firefox 3.6 - 15 */
+	background: linear-gradient(to right, #ff3f4c, #fe7251);
+	box-shadow: .2rem .2rem .6rem rgba(254, 114, 81, .6);
+}
+
+.imgLeft {
+    position: fixed;
+    bottom: 0rpx;
+    left: -200rpx;
+    height: 120rpx;
+}
+.imgRight {
+    position: fixed;
+    bottom: 0rpx;
+    right: 0rpx;
+    height: 200rpx;
+    width: 95%;
+}

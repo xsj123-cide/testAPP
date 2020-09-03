@@ -1,0 +1,89 @@
+.login {
+    @include page();
+    height: 100%;
+	background-color: white;
+}
+.custom-nav {
+    background-color: white;
+    // border-bottom: rgba(212, 212, 212,.4) solid 3rpx;
+    /deep/ .center {
+        span {
+            color:black
+        }
+    }
+    /deep/ .back {
+      .cuIcon-back {
+          border-top: 2px grey solid;
+          border-left: 2px grey solid;
+      }
+  }  
+}
+.icon {
+    height: 200rpx;
+    width: 200rpx;
+    margin-top: 100rpx;
+}
+
+.aabuttom {
+    margin-top: 50rpx;
+    padding: 0rpx 160rpx;
+    border-radius: 60rpx;
+    background-color: #fff;
+    color: rgb(92, 92, 92);
+    font-size: $font-size-extra-lg;
+    box-shadow: .2rem .2rem .6rem rgba(182, 182, 182, 0.6);
+}
+
+.loginButton {
+    border-radius: 60rpx;
+    padding: 0rpx 160rpx;
+    font-size: $font-size-extra-lg;
+    background: -webkit-linear-gradient(left, #ff3f4c, #fe7251);
+	/* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(right, #ff3f4c, #fe7251);
+	/* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(right, #ff3f4c, #fe7251);
+	/* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #ff3f4c, #fe7251);
+    box-shadow: .2rem .2rem .6rem rgba(254, 114, 81, .6);
+	margin-top: 100rpx;
+}
+
+.containera {
+	padding: 30rpx 50rpx;
+    text-align: center;
+    @include flex(column);
+    align-items: center;
+}
+.bottom {
+ bottom: 222rpx;
+ width: 100%;
+ text-align: center;
+ font-size: $font-size-base;
+ view {
+    color: gray;
+     font-size: 26rpx;
+ }
+}
+p {
+    font-size: 50rpx;
+}
+.text-center {
+	color: gray;
+	padding-top: 30rpx;
+	font-size: 24rpx;
+}
+
+.imgLeft {
+    position: fixed;
+    bottom: 0rpx;
+    left: -200rpx;
+    height: 120rpx;
+}
+.imgRight {
+    position: fixed;
+    bottom: 0rpx;
+    right: 0rpx;
+    height: 200rpx;
+    width: 95%;
+}
