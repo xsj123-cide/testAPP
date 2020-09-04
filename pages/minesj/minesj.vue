@@ -1,8 +1,9 @@
 <template>
-	<view cl ass='minesj'>
+	<view class='minesj'>
 		<custom-nav  :title="title"  center right>
 			<view slot="right">时间</view>
 		</custom-nav>
+		<navbar currenIndexa='3'></navbar>
 		<view class="top">
 			<image class="top_back" src="/static/img/wosj/topa.png"></image>
 			<image class="top_right" src="/static/img/wosj/topb.png"></image>

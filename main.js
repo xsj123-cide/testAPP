@@ -15,7 +15,9 @@ Vue.prototype.$store = $store // vuex
 // }
 
 import CustomNav from './components/public/custom-nav.vue' //自定义头部导航栏交互组件
+import NavBar from './components/public/navbar.vue' 
 Vue.component('custom-nav', CustomNav) //注册自定义头部导航栏
+Vue.component('navbar', NavBar) 
 
 // import * as filters from '@/filters'
 // Object.keys(filters).forEach(e => {

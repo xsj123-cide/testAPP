@@ -5,7 +5,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         },
@@ -14,7 +14,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         },
@@ -24,7 +24,7 @@
 				"navigationBarBackgroundColor": "#d81e06",
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 				
 			}
@@ -40,7 +40,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -49,7 +49,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -58,7 +58,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -67,7 +67,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -76,7 +76,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -85,7 +85,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -94,7 +94,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -103,7 +103,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -112,7 +112,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }
@@ -121,7 +121,7 @@
             "style" : {
 					"navigationStyle": "custom",			
 					"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 					}
 				}
         }
@@ -130,7 +130,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 					"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 					}
 			}
         }
@@ -139,7 +139,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 					"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 					}
 			}
         }
@@ -148,7 +148,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 					"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 					}
 			}
         }
@@ -157,7 +157,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 					"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 					}
 			}
         }
@@ -166,7 +166,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 					"app-plus": {
-					"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+					"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 					}
 			}
         }
@@ -175,7 +175,7 @@
             "style" : {
 				"navigationStyle": "custom",			
 				"app-plus": {
-				"pullToRefresh": { "support": true, "offset": "23%", "style": "circle", "color": "#F76454" }
+				"pullToRefresh": { "support": true, "offset": "75px", "style": "circle", "color": "#F76454" }
 				}
 			}
         }

@@ -1,6 +1,7 @@
 <template>
 	<view class="msDetail">
 		<custom-nav  :title="title"  center ></custom-nav>
+		<navbar currenIndexa='2'></navbar>
 		<view class="article">
 			<view class="title">
 				<p>简欧风格装修效果图展示 简欧风格的特点</p>
